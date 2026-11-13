@@ -15,9 +15,18 @@ const position = "Business Manager"
 		<meta name="generator" content={Astro.generator} />
 		<title>{name} - {position}</title>
 	</head>
+
 	<body>
+		
+<body class="min-h-screen">
+  <div id="progressBar"
+       class="pointer-events-none fixed left-0 top-0 z-[100] h-1 w-full origin-left scale-x-0 bg-orange-500"></div>
+</body>
     <Header/>
         <slot/>	
 		<Footer/>
+		<script> 
+		import "../scripts/animations";
+		</script>
 	</body>
 </html>
