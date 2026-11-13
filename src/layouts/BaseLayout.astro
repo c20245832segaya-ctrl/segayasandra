@@ -21,12 +21,19 @@ const position = "Business Manager"
 <body class="min-h-screen">
   <div id="progressBar"
        class="pointer-events-none fixed left-0 top-0 z-[100] h-1 w-full origin-left scale-x-0 bg-orange-500"></div>
-</body>
+
+	</body>
     <Header/>
         <slot/>	
 		<Footer/>
 		<script> 
 		import "../scripts/animations";
 		</script>
+
+		<script>
+            import { FallingLeaves } from "falling-leaves";
+            new FallingLeaves({ shapes: ["maple", "oak", "ginkgo", "birch", "oval"] });
+        </script>
+
 	</body>
 </html>
